@@ -4,7 +4,7 @@ const mensajeFinal = document.getElementById('mensajeFinal');
 
 let numeroInicial = 0;
 
-const velocidadNormal = 10;
+const velocidadNormal = 50;
 const velocidadLenta = 100;
 const umbralDesaceleracion = 10;
 
