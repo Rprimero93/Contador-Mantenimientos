@@ -9,7 +9,7 @@ let numeroInicial = 0;
 function iniciarContador() {
   const tiempoInicio = Date.now();
   
-  const intervalo = setInterval(() => {
+  function actualizarContador() {
     const tiempoTranscurrido = Date.now() - tiempoInicio;
     const progreso = Math.min(tiempoTranscurrido / duracionTotal, 1);
     
@@ -25,12 +25,15 @@ function iniciarContador() {
     
     elementoContador.textContent = numeroInicial;
     
-    if (progreso >= 1) {
-      clearInterval(intervalo);
+    if (progreso < 1) {
+      requestAnimationFrame(actualizarContador);
+    } else {
       elementoContador.textContent = numeroFinal;
       mensajeFinal.style.display = 'block';
     }
-  }, 16); // ~60fps
+  }
+  
+  actualizarContador();
 }
 
 window.onload = iniciarContador;
