@@ -1,4 +1,4 @@
-const numeroFinal = 753;
+const numeroFinal = 872;
 const elementoContador = document.getElementById('contador');
 const mensajeFinal = document.getElementById('mensajeFinal');
 const duracionTotal = 6000; // 6 segundos en milisegundos
