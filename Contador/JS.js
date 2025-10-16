@@ -1,4 +1,4 @@
-const numeroFinal = 998;
+const numeroFinal = 1006;
 const elementoContador = document.getElementById('contador');
 const mensajeFinal = document.getElementById('mensajeFinal');
 const duracionTotal = 3000; // 3 segundos
